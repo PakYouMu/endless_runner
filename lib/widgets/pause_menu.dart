@@ -25,7 +25,7 @@ class PauseMenu extends StatelessWidget {
       value: game.playerData,
       child: Center(
         child: BackdropFilter(
-          filter: ImageFilter.blur(sigmaX: 5, sigmaY: 5),
+          filter: ImageFilter.blur(sigmaX: 3, sigmaY: 4),
           child: Card(
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
@@ -97,7 +97,7 @@ class PauseMenu extends StatelessWidget {
                         AudioManager.instance.startBgm('OBRWK - Main Menu.wav');
                       },
                       child: const Text(
-                        'Exit',
+                        'Main Menu',
                         style: TextStyle(
                           fontSize: 30,
                         ),

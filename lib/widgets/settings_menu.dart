@@ -24,7 +24,7 @@ class SettingsMenu extends StatelessWidget {
       value: game.settings,
       child: Center(
         child: BackdropFilter(
-          filter: ImageFilter.blur(sigmaX: 5, sigmaY: 5),
+          filter: ImageFilter.blur(sigmaX: 3, sigmaY: 4),
           child: SizedBox(
             width: MediaQuery.of(context).size.width * 0.8,
             height: MediaQuery.of(context).size.height * 0.8,

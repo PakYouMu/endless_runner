@@ -1,6 +1,8 @@
 import 'dart:ui';
+import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import '/widgets/hud.dart';
 import '/game/endless_jungle.dart';
@@ -21,11 +23,11 @@ class MainMenu extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: BackdropFilter(
-        filter: ImageFilter.blur(sigmaX: 5, sigmaY: 5),
+        filter: ImageFilter.blur(sigmaX: 3, sigmaY: 4),
         child: Card(
           shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-          color: Colors.black.withAlpha(100),
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+          color: Colors.black.withAlpha(105),
           child: FittedBox(
             fit: BoxFit.scaleDown,
             child: Padding(
@@ -65,6 +67,23 @@ class MainMenu extends StatelessWidget {
                     },
                     child: const Text(
                       'Settings',
+                      style: TextStyle(
+                        fontSize: 30,
+                      ),
+                    ),
+                  ),
+                  ElevatedButton(
+                    onPressed: () {
+                      AudioManager.instance.stopBgm();
+                      game.reset();
+                      if (Platform.isAndroid) {
+                        SystemNavigator.pop();
+                      } else {
+                        exit(0);
+                      }
+                    },
+                    child: const Text(
+                      'Exit',
                       style: TextStyle(
                         fontSize: 30,
                       ),

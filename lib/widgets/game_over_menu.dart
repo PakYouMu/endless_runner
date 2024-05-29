@@ -26,7 +26,7 @@ class GameOverMenu extends StatelessWidget {
       value: game.playerData,
       child: Center(
         child: BackdropFilter(
-          filter: ImageFilter.blur(sigmaX: 5, sigmaY: 5),
+          filter: ImageFilter.blur(sigmaX: 3, sigmaY: 4),
           child: Card(
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
@@ -74,7 +74,7 @@ class GameOverMenu extends StatelessWidget {
                     ),
                     ElevatedButton(
                       child: const Text(
-                        'Exit',
+                        'Main Menu',
                         style: TextStyle(
                           fontSize: 30,
                         ),

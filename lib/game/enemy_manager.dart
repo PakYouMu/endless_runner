@@ -101,5 +101,3 @@ class EnemyManager extends Component with HasGameReference<EndlessJungle> {
     }
   }
 }
-
-//_AssertionError ('package:flame/src/cache/images.dart': Failed assertion: line 104 pos 7: 'asset != null': Tried to access an image "Bunny/Run (34x44).png" that does not exist in the cache. Make sure to load() an image before accessing it)
