@@ -68,7 +68,8 @@ class GameOverMenu extends StatelessWidget {
                         game.resumeEngine();
                         game.reset();
                         game.startGamePlay();
-                        AudioManager.instance.resumeBgm();
+                        AudioManager.instance
+                            .startBgm('Deep in the Forest -Main Loop.wav');
                       },
                     ),
                     ElevatedButton(
@@ -83,7 +84,7 @@ class GameOverMenu extends StatelessWidget {
                         game.overlays.add(MainMenu.id);
                         game.resumeEngine();
                         game.reset();
-                        AudioManager.instance.resumeBgm();
+                        AudioManager.instance.startBgm('OBRWK - Main Menu.wav');
                       },
                     ),
                   ],

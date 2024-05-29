@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 import '/widgets/hud.dart';
 import '/game/endless_jungle.dart';
+import '/game/audio_manager.dart';
 import '/widgets/settings_menu.dart';
 
 // This represents the main menu overlay.
@@ -47,6 +48,8 @@ class MainMenu extends StatelessWidget {
                       game.startGamePlay();
                       game.overlays.remove(MainMenu.id);
                       game.overlays.add(Hud.id);
+                      AudioManager.instance
+                          .startBgm('Deep in the Forest -Main Loop.wav');
                     },
                     child: const Text(
                       'Play',

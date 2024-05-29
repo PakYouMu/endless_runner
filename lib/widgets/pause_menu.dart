@@ -58,7 +58,9 @@ class PauseMenu extends StatelessWidget {
                         game.overlays.remove(PauseMenu.id);
                         game.overlays.add(Hud.id);
                         game.resumeEngine();
-                        AudioManager.instance.resumeBgm();
+                        // AudioManager.instance.resumeBgm();
+                        AudioManager.instance
+                            .startBgm('Deep in the Forest -Main Loop.wav');
                       },
                       child: const Text(
                         'Resume',
@@ -74,7 +76,9 @@ class PauseMenu extends StatelessWidget {
                         game.resumeEngine();
                         game.reset();
                         game.startGamePlay();
-                        AudioManager.instance.resumeBgm();
+                        // AudioManager.instance.resumeBgm();
+                        AudioManager.instance
+                            .startBgm('Deep in the Forest -Main Loop.wav');
                       },
                       child: const Text(
                         'Restart',
@@ -89,7 +93,8 @@ class PauseMenu extends StatelessWidget {
                         game.overlays.add(MainMenu.id);
                         game.resumeEngine();
                         game.reset();
-                        AudioManager.instance.resumeBgm();
+                        // AudioManager.instance.resumeBgm();
+                        AudioManager.instance.startBgm('OBRWK - Main Menu.wav');
                       },
                       child: const Text(
                         'Exit',

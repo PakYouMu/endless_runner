@@ -38,6 +38,7 @@ class EndlessJungle extends FlameGame with TapDetector, HasCollisionDetection {
   static const _audioAssets = [
     'OBRWK - Main Menu.wav',
     'Deep in the Forest -Main Loop.wav',
+    'Soft Melancholy - Death.wav',
     'hurt7.wav',
     'Jump.wav',
   ];
@@ -127,7 +128,7 @@ class EndlessJungle extends FlameGame with TapDetector, HasCollisionDetection {
       overlays.remove(Hud.id);
       pauseEngine();
       AudioManager.instance.pauseBgm();
-      AudioManager.instance.startBgm('OBRWK - Main Menu.wav');
+      AudioManager.instance.startBgm('Soft Melancholy - Death.wav');
     }
     super.update(dt);
   }
