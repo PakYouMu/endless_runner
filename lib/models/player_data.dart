@@ -9,7 +9,7 @@ class PlayerData extends ChangeNotifier with HiveObjectMixin {
   @HiveField(1)
   int highScore = 0;
 
-  int _lives = 5;
+  int _lives = 3;
 
   int get lives => _lives;
   set lives(int value) {

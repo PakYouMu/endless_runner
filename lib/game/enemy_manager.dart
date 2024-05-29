@@ -59,26 +59,26 @@ class EnemyManager extends Component with HasGameReference<EndlessJungle> {
       // As soon as this component is mounted, initilize all the data.
       _data.addAll([
         EnemyData(
-          image: game.images.fromCache('AngryPig/Walk (36x30).png'),
-          nFrames: 16,
+          image: game.images.fromCache('Bunny/Run (34x44).png'),
+          nFrames: 12,
           stepTime: 0.1,
-          textureSize: Vector2(36, 30),
+          textureSize: Vector2(34, 44),
           speedX: 80,
           canFly: false,
         ),
         EnemyData(
-          image: game.images.fromCache('Bat/Flying (46x30).png'),
-          nFrames: 7,
+          image: game.images.fromCache('BlueBird/Flying (32x32).png'),
+          nFrames: 9,
           stepTime: 0.1,
-          textureSize: Vector2(46, 30),
-          speedX: 100,
+          textureSize: Vector2(32, 32),
+          speedX: 105,
           canFly: true,
         ),
         EnemyData(
-          image: game.images.fromCache('Rino/Run (52x34).png'),
-          nFrames: 6,
+          image: game.images.fromCache('Chicken/Run (32x34).png'),
+          nFrames: 14,
           stepTime: 0.09,
-          textureSize: Vector2(52, 34),
+          textureSize: Vector2(32, 34),
           speedX: 150,
           canFly: false,
         ),
@@ -101,3 +101,5 @@ class EnemyManager extends Component with HasGameReference<EndlessJungle> {
     }
   }
 }
+
+//_AssertionError ('package:flame/src/cache/images.dart': Failed assertion: line 104 pos 7: 'asset != null': Tried to access an image "Bunny/Run (34x44).png" that does not exist in the cache. Make sure to load() an image before accessing it)

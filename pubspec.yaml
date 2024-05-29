@@ -74,9 +74,9 @@ flutter:
   assets:
     - assets/images/
     - assets/images/parallax/
-    - assets/images/AngryPig/
-    - assets/images/Bat/
-    - assets/images/Rino/
+    - assets/images/BlueBird/
+    - assets/images/Chicken/
+    - assets/images/Bunny/
     - assets/audio/
 
 

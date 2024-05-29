@@ -23,9 +23,9 @@ class EndlessJungle extends FlameGame with TapDetector, HasCollisionDetection {
   // List of all the image assets.
   static const _imageAssets = [
     'DinoSprites - vita.png',
-    'AngryPig/Walk (36x30).png',
-    'Bat/Flying (46x30).png',
-    'Rino/Run (52x34).png',
+    'BlueBird/Flying (32x32).png',
+    'Bunny/Run (34x44).png',
+    'Chicken/Run (32x34).png',
     'parallax/plx-1.png',
     'parallax/plx-2.png',
     'parallax/plx-3.png',
@@ -90,11 +90,16 @@ class EndlessJungle extends FlameGame with TapDetector, HasCollisionDetection {
 
     // Add the parallax as the backdrop.
     camera.backdrop.add(parallaxBackground);
+    _player = Player(images.fromCache('DinoSprites - vita.png'), playerData);
+    camera.backdrop.add(_player);
   }
 
   /// This method add the already created [_player]
   /// and [EnemyManager] to this game.
   void startGamePlay() {
+    if (_player.isMounted) {
+      _player.removeFromParent();
+    }
     _player = Player(images.fromCache('DinoSprites - vita.png'), playerData);
     _enemyManager = EnemyManager();
 
@@ -116,7 +121,7 @@ class EndlessJungle extends FlameGame with TapDetector, HasCollisionDetection {
 
     // Reset player data to inital values.
     playerData.currentScore = 0;
-    playerData.lives = 5;
+    playerData.lives = 3;
   }
 
   // This method gets called for each tick/frame of the game.
