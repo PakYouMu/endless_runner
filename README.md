@@ -5,7 +5,7 @@
 
 To build and run the game on your own device:
 ```
-[//]: // Clone the repository
+{::comment} // Clone the repository
 git clone https://github.com/PakYouMu/endless_runner.git
 
 [//]: // Download the required dependencies
