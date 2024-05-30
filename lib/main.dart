@@ -48,7 +48,6 @@ class EndlessJungleApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'The Endless Jungle',
       theme: ThemeData(
-        fontFamily: 'Audiowide',
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
         // Settings up some default theme for elevated buttons.

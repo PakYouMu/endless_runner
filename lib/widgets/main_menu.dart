@@ -76,7 +76,7 @@ class MainMenu extends StatelessWidget {
                     onPressed: () {
                       AudioManager.instance.stopBgm();
                       game.reset();
-                      if (Platform.isAndroid) {
+                      if (Platform.isAndroid || Platform.isIOS) {
                         SystemNavigator.pop();
                       } else {
                         exit(0);
