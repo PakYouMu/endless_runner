@@ -5,16 +5,16 @@
 
 To build and run the game on your own device:
 ```
-// Clone the repository
+[//]: // Clone the repository
 git clone https://github.com/PakYouMu/endless_runner.git
 
-// Download the required dependencies
+[//]: // Download the required dependencies
 flutter pub get
 
-// Build the app with the icon
+[//]: // Build the app with the icon
 flutter pub run flutter_launcher_icons:main
 
-// Build and run the app
+[//]: // Build and run the app
 flutter run
 ```
 ---
